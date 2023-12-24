@@ -19,6 +19,7 @@
 }
 
 .login {
+    display: flex;
     color: #333;
 }
 
