@@ -1,14 +1,19 @@
 import React from 'react'
 
-const useForm = () => {
+const types = {
+    email: {
+        regex: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+        message: 'Preencha um email valido',
+    },
+    number: {
+        regex: /^\d+$/,
+        message: 'Apenas numeros',
+    },
+}
 
-    const types = {
-        email: {
-            regex: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-            message: 'Preencha um email valido',
-        },
-    }
 
+const useForm = (type) => {
+  
     const [value, setValue] = React.useState('');
     const [error, setError] = React.useState(null)
 
