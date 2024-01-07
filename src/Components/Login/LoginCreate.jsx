@@ -26,7 +26,7 @@ const LoginCreate = () => {
     const { response } = await request(url, options);
     // só realiza o login se a resposta for ok
     if (response.ok) userLogin(username.value, password.value)
-    console.log(response)
+  
   }
 
   return (

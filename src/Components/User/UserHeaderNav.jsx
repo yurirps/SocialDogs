@@ -25,7 +25,6 @@ const UserHeaderNav = () => {
         navigate('/login')
     }
 
-    console.log(mobile)
     return (
         <>
             {mobile &&
